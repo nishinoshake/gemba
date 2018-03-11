@@ -1,0 +1,10 @@
+{
+  "extends": ["standard"],
+  "globals": {
+    "window": true,
+    "document": true
+  },
+  "rules": {
+    "no-new": "off"
+  }
+}

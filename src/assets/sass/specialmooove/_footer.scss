@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+.footer {
+  padding: 80px 20px;
+  background-color: $color-black;
+  &-title {
+    margin-bottom: 58px;
+    line-height: 0;
+    text-align: center;
+  }
+  &-credit {
+    margin-bottom: 44px;
+    line-height: 0;
+    text-align: center;
+  }
+  &-link {
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+    line-height: 0;
+    li:nth-child(n + 2) {
+      margin-left: 40px;
+    }
+  }
+  &-copyright {
+    line-height: 0;
+    text-align: center;
+  }
+}

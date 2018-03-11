@@ -1,0 +1,5 @@
+node_modules
+public
+yarn-error.log
+npm-debug.log
+.DS_Store

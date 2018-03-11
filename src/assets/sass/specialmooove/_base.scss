@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+body {
+  font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", Meiryo,
+    メイリオ, sans-serif;
+  line-height: 1.8;
+  letter-spacing: 0.1em;
+  font-feature-settings: "palt" 1;
+  color: $color-white;
+}
+
+.container {
+  position: relative;
+  overflow: hidden;
+  &:before,
+  &:after {
+    content: "";
+    width: 320px;
+    width: calc((100vw - 640px) / 2);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+  }
+  &:before {
+    right: 50%;
+    margin-right: 320px;
+    background-image: url(#{$image}/bg_left.jpg);
+    background-position: right center;
+  }
+  &:after {
+    left: 50%;
+    margin-left: 320px;
+    background-image: url(#{$image}/bg_right.jpg);
+    background-position: left center;
+  }
+}
+
+.contents {
+  width: 640px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  background: url(#{$image}/bg.png) center top repeat;
+}
+
+.section {
+  + .section {
+    &:before {
+      content: "";
+      height: 60px;
+      display: block;
+      background-color: $color-white;
+      border-top: 10px solid $color-black;
+      border-bottom: 10px solid $color-black;
+      box-sizing: border-box;
+    }
+  }
+}
+
+.infinite-card {
+  overflow: hidden;
+}

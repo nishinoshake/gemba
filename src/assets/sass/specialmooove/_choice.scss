@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+.choice {
+  height: 715px;
+  position: relative;
+  &-body {
+    height: 100%;
+    position: relative;
+    z-index: 1;
+  }
+  &-title {
+    position: absolute;
+    top: 65px;
+    left: 73px;
+  }
+  &-item {
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+    &.mod-play {
+      bottom: 83px;
+      left: -26px;
+    }
+    &.mod-buy {
+      bottom: 93px;
+      right: 23px;
+    }
+  }
+  &-chara {
+    position: absolute;
+    top: 6px;
+    right: 80px;
+  }
+  &-bg {
+    width: 100%;
+    height: calc(100% - 60px);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-image: url(#{$image}/choice/bakuhatsu.png);
+    @include bg-cover;
+  }
+}

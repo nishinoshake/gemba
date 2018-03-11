@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+.mv {
+  height: 788px;
+  position: relative;
+  overflow: hidden;
+  &-body {
+    height: 100%;
+    position: relative;
+    z-index: 1;
+  }
+  &-title {
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+    top: 340px;
+    left: 50%;
+    margin-left: -200px;
+  }
+  &-text {
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+    bottom: 160px;
+    left: 0;
+    text-align: center;
+  }
+  &-scroll {
+    width: 100%;
+    position: absolute;
+    bottom: 40px;
+    opacity: 0;
+    text-align: center;
+    line-height: 0;
+    cursor: pointer;
+    span {
+      display: block;
+    }
+    &-icon {
+      margin-top: 10px;
+      animation: arrow 1s infinite;
+    }
+  }
+  &-package {
+    position: absolute;
+    z-index: 1;
+    top: 93px;
+    left: 70px;
+    opacity: 0;
+  }
+  &-card {
+    position: absolute;
+    top: 38px;
+    right: 55px;
+    opacity: 0;
+  }
+  &-bg {
+    width: 800px;
+    height: 1084px;
+    position: absolute;
+    top: -150px;
+    left: -78px;
+    z-index: 0;
+    opacity: 0;
+    background-image: url(#{$image}/mv/bakuhatsu.png);
+    @include bg-cover;
+  }
+}
+
+@keyframes arrow {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  50%,
+  100% {
+    transform: translate3d(0, 20px, 0);
+    opacity: 0;
+    animation-timing-function: $easeOutCubic;
+  }
+}

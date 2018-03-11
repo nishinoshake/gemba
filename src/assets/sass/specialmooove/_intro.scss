@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+.intro {
+  position: relative;
+  &-title {
+    position: relative;
+    z-index: 1;
+    padding-top: 200px;
+    text-align: center;
+  }
+  &-copy {
+    position: relative;
+    z-index: 1;
+    margin-top: -4px;
+    text-align: center;
+  }
+  &-text {
+    margin-top: -88px;
+    padding: 100px 10px 66px;
+    font-size: 26px;
+    line-height: 2;
+    text-align: center;
+    background-color: $color-black;
+  }
+  &-card {
+    width: 100%;
+    padding: 2px 0;
+    display: flex;
+    line-height: 0;
+    &.mod-top {
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+    }
+    &-inside {
+      display: inline-flex;
+    }
+  }
+}
