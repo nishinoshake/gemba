@@ -1,5 +1,4 @@
 @charset "utf-8";
-
 .movie {
   padding-bottom: 25px;
   &-title {
@@ -12,11 +11,11 @@
     margin: 0 auto 14px;
     border: 10px solid $color-black;
     line-height: 0;
+    &:nth-child(n+2) {
+      margin-top: 20px;
+    }
   }
   &-copy {
-    text-align: center;
-  }
-  &-button {
     text-align: center;
   }
 }
