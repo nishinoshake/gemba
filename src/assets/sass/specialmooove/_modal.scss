@@ -60,7 +60,7 @@
       }
       &-item {
         &:nth-child(n + 2) {
-          margin-top: 40px;
+          margin-top: 60px;
         }
       }
       &-thumb {
@@ -101,6 +101,7 @@
       text-align: center;
     }
     &-button {
+      margin-top: 80px;
       text-align: center;
     }
   }
