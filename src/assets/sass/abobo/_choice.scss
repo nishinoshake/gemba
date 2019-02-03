@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+.choice {
+  .section-inside {
+    height: 605px;
+    background: url(#{$image-abobo}/choice/bg.jpg) center center no-repeat;
+    background-size: cover;
+  }
+  &-title {
+    position: absolute;
+    top: 80px;
+    left: 105px;
+  }
+  &-item {
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+    &.mod-play {
+      bottom: 72px;
+      left: 40px;
+    }
+    &.mod-buy {
+      bottom: 72px;
+      right: 40px;
+    }
+  }
+}

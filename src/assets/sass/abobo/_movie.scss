@@ -1,0 +1,23 @@
+@charset "utf-8";
+.movie {
+  .section-inside {
+    padding: 60px 0 50px;;
+  }
+  &-title {
+    margin-bottom: 22px;
+    text-align: center;
+  }
+  &-youtube {
+    width: 500px;
+    margin: 0 auto 14px;
+    border: 10px solid #392529;
+    line-height: 0;
+    &:nth-child(n+2) {
+      margin-top: 20px;
+    }
+  }
+  &-copy {
+    margin-top: 30px;
+    text-align: center;
+  }
+}

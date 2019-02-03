@@ -1,13 +1,10 @@
 {
   "presets": [
     [
-      "env",
+      "@babel/preset-env",
       {
-        "targets": {
-          "browsers": ["last 3 versions"]
-        }
+        "targets": "> 0.25%, not dead"
       }
     ]
-  ],
-  "plugins": ["transform-es2015-arrow-functions"]
+  ]
 }

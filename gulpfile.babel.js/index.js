@@ -7,9 +7,7 @@ import browserSync from 'browser-sync'
 import watch from 'gulp-watch'
 import imagemin from 'gulp-imagemin'
 import sass from 'gulp-sass'
-import cssnano from 'gulp-cssnano'
 import autoprefixer from 'gulp-autoprefixer'
-import sourcemap from 'gulp-sourcemaps'
 import pngquant from 'imagemin-pngquant'
 import gulpSequence from 'gulp-sequence'
 import webpack from 'webpack'
@@ -57,7 +55,6 @@ gulp.task('imagemin', () => {
     .pipe(
       imagemin([
         imagemin.gifsicle(),
-        imagemin.jpegtran(),
         imagemin.svgo(),
         pngquant(config.options.pngquant)
       ])
@@ -69,7 +66,6 @@ gulp.task('imagemin', () => {
 gulp.task('sass', () => {
   return gulp
     .src(config.path.sass.src, { base: config.path.sass.base })
-    .pipe(cache('sass'))
     .pipe(plumber())
     .pipe(sass(config.options.sass))
     .pipe(autoprefixer(config.options.autoprefixer))
